@@ -2,9 +2,7 @@ require 'dotenv/load'
 require "aws-sdk-s3"
 require "pry"
 
-Aws.config.update({
-    region: 'us-east-1'
-})
+Aws.config.update
 
 s3 = Aws::S3::Client.new
 resp = s3.list_buckets
